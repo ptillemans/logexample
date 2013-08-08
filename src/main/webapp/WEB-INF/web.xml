@@ -1,19 +1,53 @@
 <!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+    <display-name>Archetype Created Web Application</display-name>
 
-  <servlet>
-      <servlet-name>HelloServlet</servlet-name>
-      <display-name>Your friendly hello servlet</display-name>
-      <servlet-class>com.melexis.example.logexample.HelloServlet</servlet-class>
-  </servlet>
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <display-name>Your friendly hello servlet</display-name>
+        <servlet-class>com.melexis.example.logexample.HelloServlet
+        </servlet-class>
+    </servlet>
 
-  <servlet-mapping>
-      <servlet-name>HelloServlet</servlet-name>
-      <url-pattern>hello</url-pattern>
-  </servlet-mapping>
+    <!-- servlets to test legacy support -->
+    <servlet>
+        <servlet-name>HelloLog4jServlet</servlet-name>
+        <display-name>Your friendly hello servlet for Log4j</display-name>
+        <servlet-class>com.melexis.example.logexample.LegacyLog4jServlet
+        </servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HelloJclServlet</servlet-name>
+        <display-name>Your friendly hello servlet for Commons Logging</display-name>
+        <servlet-class>com.melexis.example.logexample.LegacyCommonsLoggingServlet
+        </servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HelloJulServlet</servlet-name>
+        <display-name>Your friendly hello servlet for Log4j</display-name>
+        <servlet-class>com.melexis.example.logexample.LegacyJulServlet
+        </servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>hello</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HelloLog4jServlet</servlet-name>
+        <url-pattern>helloLog4j</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HelloJclServlet</servlet-name>
+        <url-pattern>helloJcl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HelloJulServlet</servlet-name>
+        <url-pattern>helloJul</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>

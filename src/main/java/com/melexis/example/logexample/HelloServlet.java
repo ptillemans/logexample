@@ -23,9 +23,10 @@ public class HelloServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        logger.info("Entering hello servlet");
+        String id = req.getParameter("id");
+        logger.info("Entering hello servlet with id " + id);
         Writer out = resp.getWriter();
         out.write("Hello, stranger");
-        logger.info("Leaving hello servlet");
+        logger.info("Leaving hello servlet with id " + id);
     }
 }
