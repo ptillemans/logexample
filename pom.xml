@@ -62,7 +62,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-s    <build>
+    <build>
         <finalName>logexample</finalName>
         <plugins>
             <plugin>
